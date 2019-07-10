@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function listPrimes(arr) {
+        let check = true;
+        let arrResult = new Array();
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 2; j <= Math.sqrt(arr[i]); j++) {
+                if (arr[i] % j == 0) {
+                    check = false;
+                    break;
+                } else {
+                    check = true;
+                }
+            }
+            if (check == true){
+                arrResult[dem] = arr[i];
+                dem++;
+            }
+        }
+        return arrResult;
+    }
+
+    let arr1 = [10, 5, 2, 8, 7, 13];
+    let arr2 = [2, 4, 5, 6, 8];
+    let result1 = listPrimes(arr1);
+    let result2 = listPrimes(arr2);
+    document.write('mảng mới của arr1 là: ' + result1 + '<br>');
+    document.write('mảng mới của arr2 là: ' + result2);
+</script>
+</body>
+</html>

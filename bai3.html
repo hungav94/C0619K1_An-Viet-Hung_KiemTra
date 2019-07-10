@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    function sumDiagonal(arr) {
+        let sum = 0;
+        let x;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr.length == arr[i].length) {
+                    if (i == j) {
+                        x = arr[i][j];
+                        sum += x;
+                        console.log(x);
+                    }
+                }
+            }
+        }
+        return sum;
+    }
+
+    let arr1 = [[1, 2],
+                [3, 4]];
+
+    let arr2 = [[1, 2, 3],
+                [3, 4, 5],
+                [6, 7, 8]];
+
+    let result1 = sumDiagonal(arr1);
+    let result2 = sumDiagonal(arr2);
+
+    document.write('Tổng đường chéo chính của arr1 là: ' + result1 + '<br>');
+    document.write('Tổng đường chéo chính của arr2 là: ' + result2);
+
+</script>
+</body>
+</html>
